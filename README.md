@@ -59,7 +59,7 @@ Every campaign follows this proven format:
 ## File Structure
 
 creative-agent/
-├── app.py # Streamlit UI with language toggle
+├── streamlit_app.py # Streamlit UI with language toggle
 ├── agent.py # AI Agent logic (Strategist + Copywriter)
 ├── requirements.txt # Python dependencies
 └── .streamlit/
@@ -78,14 +78,15 @@ cd creative-agent
 
 ## Windows (PowerShell):
 
-powershell
 python -m venv venv
+
+## Activate virtual environment
 .\venv\Scripts\Activate.ps1
 
 ## macOS/Linux:
 
-bash
 python3 -m venv venv
+
 source venv/bin/activate
 
 ### 3. Install Dependiencies
@@ -100,7 +101,7 @@ toml
 OPENAI_API_KEY = "your-openai-api-key-here"
 
 ### 5. Run the app
-streamlit run app.py
+streamlit run streamlit_app.py
 
 
 ### Deployment on Streamlit Cloud 
@@ -108,7 +109,7 @@ streamlit run app.py
 1. Push code to GitHub repository
 2. Go to share.streamlit.io
 3. Connect your GitHub repo
-4. Set main file: app.py
+4. Set main file: streamlit_app.py
 5. Add secret: OPENAI_API_KEY
 
 ### Environment Variables
