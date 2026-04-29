@@ -177,10 +177,11 @@ with col1:
             key="target_audience"
         )
         
+        # Brand voice - NO DEFAULT SELECTION (empty list)
         brand_voice = st.multiselect(
             t("brand_voice"),
             options=t("brand_voice_options"),
-            default=[t("brand_voice_options")[0]],
+            default=[],  # Empty list = nothing selected by default
             key="brand_voice"
         )
         
@@ -195,7 +196,7 @@ with col2:
     if submit_button and product_name and product_desc and target_audience:
         # Prepare voice for API
         voice_english = map_voice_to_english(brand_voice)
-        brand_voice_str = ", ".join(voice_english) if voice_english else "Authentic"
+        brand_voice_str = ", ".join(voice_english) if voice_english else "Authentic, Refreshing"  # Default if none selected
         
         # Output language is automatically the same as UI language
         output_lang = st.session_state.ui_language
