@@ -70,7 +70,8 @@ creative-agent/
 
 ### 1. Clone the repository
 
-git clone https://github.com/yourusername/creative-agent.git
+git clone https://github.com/saqib-shafiq/creative-agent.git
+          
 cd creative-agent
 
 ### 2. Create virtual environment
